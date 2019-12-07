@@ -1,1 +1,1 @@
-Hello, I am deployed through CI/CD
+Hello, I am deployed
