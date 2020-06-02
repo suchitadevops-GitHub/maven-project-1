@@ -1,1 +1,1 @@
-Hello, I am deployed via CI/CD
+Hello, Welcome to Ansible Automation
