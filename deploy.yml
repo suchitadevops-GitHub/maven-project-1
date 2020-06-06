@@ -1,8 +1,8 @@
 ---
-- hosts: demo
+- hosts: client2
   become: yes
   tasks:
           - name: copy war file
             copy:
-                    src: ./webapp/target/webapp.war
+                    src: /home/ubuntu/etc/ansible/webapp/target/webapp.war
                     dest: /opt/apache-tomcat-8.5.55/webapps
