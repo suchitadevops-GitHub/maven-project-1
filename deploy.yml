@@ -5,4 +5,4 @@
           - name: copy war file
             copy:
                     src: /home/ubuntu/etc/ansible/webapp/target/webapp.war
-                    dest: /opt/apache-tomcat-8.5.55/webapps
+                    dest: /opt/apache-tomcat-8.5.56/webapps
