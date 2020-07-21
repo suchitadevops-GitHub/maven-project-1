@@ -1,1 +1,1 @@
-CI/CD for Application Deployment usind Jenkins and Ansible - version 1.1
+CI/CD for Application Deployment demo
