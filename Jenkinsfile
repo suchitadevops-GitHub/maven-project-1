@@ -29,7 +29,7 @@ pipeline {
 
         stage ('install Stage') {
             steps {
-                withMaven(maven : 'LocalMaven') {
+                withMaven(maven : 'local_mvn_v3.5_p1') {
                     sh 'mvn install'
                 }
             }
