@@ -4,7 +4,7 @@ pipeline {
 
     stages {
         stage('SCM Checkout'){
-          git 'https://github.com/pranikita/maven-project-1'
+          git branch: 'ci-cd-pipeine-1', url: 'https://github.com/pranikita/maven-project-1.git'
         }
   }
     {
