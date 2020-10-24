@@ -11,7 +11,7 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                withMaven(maven : 'local_maven_3') {
+                withMaven(maven : 'local_mvn_v3.5_p1') {
                     sh 'mvn clean compile'
                 }
             }
@@ -20,7 +20,7 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                withMaven(maven : 'local_maven_3') {
+                withMaven(maven : 'local_mvn_v3.5_p1') {
                     sh 'mvn test'
                 }
             }
@@ -29,7 +29,7 @@ pipeline {
 
         stage ('install Stage') {
             steps {
-                withMaven(maven : 'local_maven_3') {
+                withMaven(maven : 'local_mvn_v3.5_p1') {
                     sh 'mvn install'
                 }
             }
@@ -37,8 +37,8 @@ pipeline {
 
         stage ('deploy to tomcat') {
              steps {
-                 sshagent(['pipeline_deployment']) {
-                 sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@172.31.39.192:/var/lib/tomcat/webapps'
+                 sshagent(['tomcat_dev_server']) {
+                 sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@172.31.80.143:/var/lib/tomcat/webapps'
       } 
 }
 }
